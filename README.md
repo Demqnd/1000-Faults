@@ -50,7 +50,7 @@ The account script for `ca-pub-8738741825905481` is included once in `index.html
 
 The right sidebar reserves a 300px-wide ad area on screens at least 1100px wide. It is hidden on smaller screens to keep the rules readable.
 
-To activate this placement, create a responsive display ad in AdSense under **Ads > By ad unit > Display ads**, then copy its `data-ad-slot` value into `SIDEBAR_AD_SLOT` in `src/AdSidebar.jsx`. That value is the ad unit ID, not your publisher ID. Until it is provided, the sidebar shows an empty reserved space and does not request a manual ad.
+The sidebar uses the **Davison** display ad unit (`9323645576`), configured as `SIDEBAR_AD_SLOT` in `src/AdSidebar.jsx`. It requests an ad once the sidebar is visible and has a measurable width. Full-width expansion is disabled to keep the ad inside the right column. To change ad units later, replace that slot ID with the new unit's `data-ad-slot` value.
 
 Keep **Auto ads off** in your AdSense account if you want ads only in this manually placed sidebar. The account script can also run Auto ads if you enable them in Google, and those placements are controlled by Google rather than this layout.
 

@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react'
 
-// Paste the data-ad-slot value from your AdSense display ad unit here.
-// The account script alone does not identify an ad unit or its placement.
-const SIDEBAR_AD_SLOT = ''
+// AdSense display ad unit: Davison.
+const SIDEBAR_AD_SLOT = '9323645576'
 
 export default function AdSidebar() {
   const adElement = useRef(null)
