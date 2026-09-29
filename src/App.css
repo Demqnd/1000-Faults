@@ -81,6 +81,15 @@ h1 > span { color: #9cabb9; }
 .empty-state p { font-size: 13px; line-height: 1.7; margin-bottom: 24px; }
 .skip-link { position: fixed; left: 16px; top: -80px; background: var(--mint); color: #0b1520; padding: 12px; border-radius: 5px; z-index: 10; }
 .skip-link:focus { top: 16px; }
+.ad-sidebar { display: none; }
+.ad-sidebar-label { margin-bottom: 12px; color: var(--muted); font-size: 10px; letter-spacing: 1px; text-align: center; }
+.ad-sidebar-space { width: 300px; min-height: 250px; }
+.ad-sidebar-placeholder { min-height: 250px; border: 1px dashed #ffffff16; border-radius: 7px; background: #ffffff02; }
+@media (min-width: 1100px) {
+  .site-shell { max-width: 1480px; }
+  .workspace { grid-template-columns: 210px minmax(0, 1fr) 324px; }
+  .ad-sidebar { display: block; align-self: start; padding-left: 24px; }
+}
 @media (min-width: 1450px) { .site-shell { padding-top: 18px; } }
 @media (max-width: 900px) {
   .site-shell { padding: 0 28px; }

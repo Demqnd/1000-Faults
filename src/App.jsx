@@ -1,6 +1,7 @@
 ﻿import { useRef, useState } from 'react'
 import { gameInstructions, rules } from './data/rules'
 import { searchRules } from './search'
+import AdSidebar from './AdSidebar'
 import './App.css'
 
 function Icon({ name, ...props }) {
@@ -62,6 +63,7 @@ function App() {
           {page === 'tips' && <section className="info-page"><div className="eyebrow">FIND IT BEFORE YOU FORGET IT</div><h1>A little search help.</h1><p>Half-remember a rule? Start with what you know.</p><div className="info-card"><h2>Search the idea</h2><p>Try “nose”, “country”, or “knock on wood”. Search includes related keywords, so “geography” finds the country rule, too.</p><button className="text-button" onClick={() => trySearch('geography')}>Try “geography” <Icon name="arrow" /></button></div><div className="info-card"><h2>Know the number?</h2><p>Enter a rule number, with or without the #. For example, 022 takes you straight to rule #022.</p><button className="text-button" onClick={() => trySearch('#022')}>Find rule #022 <Icon name="arrow" /></button></div><div className="info-card"><h2>Keep it simple</h2><p>A keyword usually works best. Clear the search with the × button or press Escape to see the whole rulebook again.</p></div></section>}
           {page === 'about' && <section className="info-page"><div className="eyebrow">MADE FOR GAME NIGHT</div><h1>1000 rules.<br /><span>Countless “wait, what?”s.</span></h1><p>A game made by two friends, and a place to keep all the rules straight.</p><div className="info-card"><h2>The idea is simple.</h2><p>Break a rule, get a fault, take a drink. From naming a country to forgetting to knock on the table before a question, it’s the little things that catch you out.</p></div><div className="info-card"><h2>Rules of the game</h2><p>{gameInstructions}</p></div><button className="outline-button" onClick={browseRules}>Explore the rulebook <Icon name="arrow" /></button></section>}
         </main>
+        <AdSidebar />
       </div>
       <footer className="site-footer"><span><span className="footer-dot" /> Made for nights worth remembering.</span><span>1000 RULES <span className="footer-divider">/</span> THE RULEBOOK</span></footer>
     </div>
